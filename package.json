@@ -1,6 +1,7 @@
 {
   "name": "bloggy-app",
   "version": "0.1.0",
+  "homepage": "https://MustafaMDKR.github.io/bloggy",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
@@ -19,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "heroku-postbuild": "npm run build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +41,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://bloggy.herokuapp.com/api"
+  "proxy": "https://bloggy.herokuapp.com/api",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }
